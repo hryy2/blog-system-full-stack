@@ -4,11 +4,16 @@ const express = require('express');
 
 const blogRoutes = require('./routes/blog');
 
+const methodOverride = require('method-override');
+
+
 const app = express();
 
 // Activate EJS view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+app.use(methodOverride('_method'));
 
 app.use(express.urlencoded({ extended: true })); // Parse incoming request bodies
 app.use(express.static('public')); // Serve static files (e.g. CSS files)

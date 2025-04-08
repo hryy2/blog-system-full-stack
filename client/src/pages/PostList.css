@@ -1,0 +1,214 @@
+/* 基本样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body, html {
+    height: 100%; /* 确保页面高度充满屏幕 */
+    background-color: #f4f7fc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 页面内容从顶部开始 */
+    align-items: stretch; /* 页面宽度适应屏幕 */
+  }
+  
+  [data-theme='dark'] {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  [data-theme='dark'] header {
+    background-color: #1f1f1f;
+  }
+  
+  [data-theme='dark'] .post-card {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+  }
+  
+  [data-theme='dark'] .post-actions a {
+    color: #1e90ff;
+  }
+  
+  [data-theme='dark'] .theme-toggle {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  [data-theme='light'] header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-theme='light'] .post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  [data-theme='light'] .post-actions a {
+    color: #007bff;
+  }
+  
+  header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .theme-toggle {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .theme-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1; /* 让主体区域填充剩余的空间 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 保证高度充满整个屏幕 */
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+  }
+  
+  .post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .meta {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .post-actions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .post-actions a:hover,
+  .post-actions button:hover {
+    color: #0056b3;
+  }
+  
+  /* 确保删除按钮、视图和编辑按钮的样式 */
+.post-actions a,
+.post-actions button {
+  text-decoration: none;
+  color: #007bff;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.post-actions button {
+    margin-top:0ch;
+  }
+
+.post-actions a:hover,
+.post-actions button:hover {
+  color: #fff;
+  background-color: #007bff; /* 高亮显示时背景色 */
+}
+
+  
+  /* 适应小屏幕 */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .post-card {
+      padding: 15px;
+    }
+  
+    .post-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .post-actions a,
+    .post-actions form button {
+      width: 100%;
+    }
+  }
+  

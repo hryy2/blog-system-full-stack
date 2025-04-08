@@ -1,0 +1,139 @@
+/* 基本样式 */
+html, body {
+    height: 100%;  /* 确保 html 和 body 填满屏幕 */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* 确保 body 的最小高度为视口高度 */
+  }
+  
+  .container {
+    flex: 1;  /* 使容器填充剩余的空间 */
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;  /* 内容区域背景色 */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    border-color: #6200ea;
+    outline: none;
+  }
+  
+  textarea {
+    min-height: 300px;
+    resize: vertical;
+  }
+  
+  /* EasyMDE 编辑器样式 */
+  .EasyMDEContainer .CodeMirror {
+    min-height: 300px;
+    font-size: 1rem;
+  }
+  
+  .editor-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    background-color: #6200ea;
+    padding: 6px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .editor-toolbar button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .editor-toolbar button:hover {
+    background-color: #bb86fc;
+  }
+  
+  .editor-preview,
+  .editor-preview-side {
+    background-color: #f9f9f9;
+  }
+  
+  /* 提交按钮 */
+  .submit-btn {
+    background-color: #6200ea;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: #3700b3;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  
+    .submit-btn {
+      padding: 0.8rem;
+    }
+  }
+  

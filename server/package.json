@@ -1,0 +1,25 @@
+{
+  "name": "web-development-complete-guide",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Maximilian Schwarzmüller (Academind GmbH)",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "easymde": "^2.20.0",
+    "ejs": "^3.1.6",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1",
+    "marked": "^15.0.7",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "description": ""
+}

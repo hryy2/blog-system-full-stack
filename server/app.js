@@ -12,8 +12,7 @@ app.use(express.urlencoded({ extended: true })); // Parse incoming request bodie
 app.use(express.json()); // For parsing application/json bodies
 app.use(express.static(path.join(__dirname, 'public'))); // Serve static files (e.g. CSS files)
 
-// Enable CORS (跨域资源共享)
-app.use(cors()); // 你可以根据需要进行 CORS 配置，或者更细致地控制哪些来源被允许访问
+app.use(cors()); 
 
 // Serve React app (production build)
 if (process.env.NODE_ENV === 'production') {
@@ -29,10 +28,10 @@ if (process.env.NODE_ENV === 'production') {
 // API routes
 app.use('/api', blogRoutes); // Add `/api` prefix for API routes
 
-// 先定义 API 路由
+
 app.use('/api', require('./routes/blogRoutes'));
 
-// 然后定义静态文件路由
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client', 'dist')));
   app.get('*', (req, res) => {

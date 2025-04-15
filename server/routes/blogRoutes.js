@@ -3,14 +3,13 @@ const router = express.Router();
 const db = require('../database/blog');
 const { marked } = require('marked');
 
-// 原始页面功能保留，用于简单的重定向
 router.get('/', (req, res) => {
   res.redirect('/posts');
 });
 
 
 // ==============================
-// 👤 Author 相关接口
+// Author 相关接口
 // ==============================
 
 // 获取所有作者
@@ -138,7 +137,7 @@ router.delete('/posts/:id', async (req, res) => {
 });
 
 // ==============================
-// 🚀 RESTful API 接口
+// RESTful API 接口
 // ==============================
 
 // 获取所有文章
